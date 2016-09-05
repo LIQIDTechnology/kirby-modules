@@ -16,7 +16,7 @@
       filter: '*'
     };
 
-    this.options = $.extend({}, defaults, options)
+    this.options = $.extend({}, defaults, options);
 
     this.$tabs = $(el);
 
@@ -44,11 +44,11 @@
     } else {
       this.toggle(this.items().find('a').first());
     }
-  }
+  };
 
   Tabs.prototype.items = function(){
     return this.$tabs.find(this.options.filter);
-  }
+  };
 
   Tabs.prototype.activate = function($target){
     targetForLink($target).show();
@@ -62,7 +62,7 @@
 
     this.items().find('a').each(function(){
       targetForLink(this).hide();
-    })
+    });
 
     this.activate($target);
   };
@@ -147,13 +147,13 @@
     if(arr.length < 1) return null;
 
     return arr[arr.length - 1];
-  }
+  };
 
   var first = function(arr) {
     if(!arr.length) return null;
 
     return arr[0]
-  }
+  };
 
   var Modules = function(el) {
     var element  = $(el);
